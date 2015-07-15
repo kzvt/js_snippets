@@ -1,0 +1,14 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('$module$')
+        .config($conf$});
+
+    $conf$.$inject = ['$dependencies$'];
+
+
+    function $conf$() {
+     $a$
+    }
+})();

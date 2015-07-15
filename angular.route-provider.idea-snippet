@@ -1,0 +1,5 @@
+$routeProvider$
+      .when('/$name$', {
+        templateUrl: 'app/$module$/$name$.html',
+        controller: '$name$Controller'
+  });

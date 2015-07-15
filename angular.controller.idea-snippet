@@ -1,0 +1,17 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('$module$')
+        .controller('$Controller$', $Controller$);
+
+    $Controller$.$inject = ['$inject$'];
+
+
+    function $Controller$() {
+        var vm = this;
+        vm.title = '$Controller';
+
+
+    }
+})();
