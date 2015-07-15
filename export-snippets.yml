@@ -1,0 +1,159 @@
+- trigger: a_md
+  description: Set angular Module
+  scope: javascript
+  mTime: 1436146218420
+  text: |
+        angular.module('${1:ModuleName}', [${2}]);
+
+- trigger: a_mod
+  description: Angular Module
+  scope: javascript
+  mTime: 1436145683700
+  text: |
+        angular.module('${1:ModuleName}').${2}
+
+- trigger: a_conf_router
+  description: Angular module config - routerProvider
+  scope: javascript
+  mTime: 1436151323942
+  text: |
+        angular.module('${1:ModuleName}').config(['$routeProvider', function ($routeProvider) {\r
+          ${2}\r
+        }]);
+
+- trigger: a_route
+  description: angular route
+  scope: javascript
+  mTime: 1436146672218
+  text: |
+        $routeProvider.when("/${1}", {\r
+          controller: '${2:Name}Controller as ${3:name}Ctrl',\r
+          templateUrl: '/${4:template}'\r
+        });
+
+- trigger: a_conf
+  description: Angular config
+  scope: javascript
+  mTime: 1436147849936
+  text: |
+        angular.module('${1:ModuleName}').config(['${2}'${3} function (${2}) {\r
+          \r
+        }]);
+
+- trigger: a_run
+  description: ang run
+  scope: javascript
+  mTime: 1436147836618
+  text: |
+        angular.module('${1:ModuleName}').run(['${2}'${3} function (${2}) {\r
+          \r
+        }]);
+
+- trigger: a_contr
+  description: Ang controller
+  scope: javascript
+  mTime: 1436151331580
+  text: |
+        angular.module('${1:ModuleName}').controller('${2:Name}Controller',['${3}'${4} function (${3}) {\r
+          \r
+        }]);
+
+- trigger: a_dir1
+  description: directive simplest
+  scope: javascript
+  mTime: 1436148506407
+  text: |
+        angular.module('${1:ModuleName}').directive('${2:DirectiveName}', [function () {\r
+          return {\r
+            link: function (scope, element, attrs) {\r
+              ${3}\r
+            }\r
+          };\r
+        }]);
+
+- trigger: a_dir2
+  description: ang dir with link scope url
+  scope: javascript
+  mTime: 1436148777874
+  text: |
+        angular.module('${1:ModuleName}').directive('${2:DirectiveName}', [function () {\r
+          return {\r
+            restrict:'${3:AE}',\r
+            scope:{},\r
+            templateUrl: '/${4:templates}',\r
+            link: function (scope, element, attrs) {\r
+              ${5}\r
+            }\r
+          };\r
+        }]);
+
+- trigger: a_dir3
+  description: ang directives controller bind
+  scope: javascript
+  mTime: 1436150154698
+  text: |
+        angular.module('${1:ModuleName}').directive('${2:DirectiveName}', [function () {\r
+          return {\r
+            scope: {},\r
+            restrict: '${3:AE}',\r
+            controllerAs: '${4:ctrlas}',\r
+            templateUrl: '/${5:templates}',\r
+            bindToController: true,\r
+            controller: [function () {\r
+              ${6}\r
+            }]\r
+          };\r
+        }]);
+
+- trigger: a_dir4
+  description: ang dir sub extended
+  scope: javascript
+  mTime: 1436151011417
+  text: |
+        angular.module('${1:ModuleName}').directive('${2:DirectiveName}', [function () {\r
+          return {\r
+            scope: {},\r
+            restrict: '${3:AE}',\r
+            controllerAs: '${4:ctrlas}',\r
+            require: ['${5:myDirective}', '^${6:topDirective}'],\r
+            templateUrl: '/${7:templates}',\r
+            bindToController: true,\r
+            controller: [function () {\r
+        \r
+            }],\r
+            link: function (scope, element, attrs, ctrls) {\r
+        \r
+            }\r
+          };\r
+        }]);
+
+- trigger: a_fact
+  description: Simple Factory
+  scope: javascript
+  mTime: 1436151281829
+  text: |
+        angular.module('${1:ModuleName}').factory('${2:Factory}',['${3}'${4} function (${3}) {\r
+          \r
+        }]);
+
+- trigger: h_index
+  description: Default index .html
+  scope: html
+  mTime: 1436152337909
+  text: |
+        <!DOCTYPE html>\r
+        <html lang="${1}">\r
+        \r
+        <head>\r
+          <link rel="stylesheet" type="text/css" href="${2}" />\r
+          <meta charset='UTF-8' />\r
+          <title>${3}</title>\r
+        </head>\r
+        \r
+        <body>\r
+         <<h1>${3}</h1>\r
+          <script type="text/javascript" src="${4}"></script>\r
+        </body>\r
+        \r
+        </html>
+

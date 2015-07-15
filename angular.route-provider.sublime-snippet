@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+    ${1:routeProvider}
+      .when('/${3:name}', {
+        templateUrl: 'app/${2:module}/${3:name}.html',
+        controller: '${3:name}Controller'
+  });
+]]></content>
+    <tabTrigger>ngrouteProvider</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
